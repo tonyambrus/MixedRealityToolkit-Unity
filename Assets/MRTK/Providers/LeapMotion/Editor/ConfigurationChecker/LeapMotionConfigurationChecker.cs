@@ -14,7 +14,7 @@ namespace Microsoft.MixedReality.Toolkit.LeapMotion
     /// Class that checks if the Leap Motion Core assets are present and configures the project if they are.
     /// </summary>
     [InitializeOnLoad]
-    static class LeapMotionConfigurationChecker
+    public static class LeapMotionConfigurationChecker
     {
         // The presence of the LeapXRServiceProvider.cs is used to determine if the Leap Motion Core Assets are in the project.
         private const string trackedLeapFileName = "LeapXRServiceProvider.cs";
@@ -302,7 +302,7 @@ namespace Microsoft.MixedReality.Toolkit.LeapMotion
         /// Warning 618 and 649 are logged when the Leap Motion Core Assets are imported into the project, 618 is the obsolete warning and 649 is a null on start warning.
         /// </summary>
         [MenuItem("Mixed Reality Toolkit/Utilities/Leap Motion/Configure CSC File for Leap Motion", false, 0)]
-        static void UpdateCSC()
+        public static void UpdateCSC()
         {
             // The csc file will always be in the root of assets
             string cscFilePath = Path.Combine(Application.dataPath, "csc.rsp");
