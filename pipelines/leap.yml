@@ -1,0 +1,31 @@
+# Build for Leap Motion
+
+variables:
+- template: config/settings.yml
+
+jobs:
+- job: LeapMotionValidation
+  timeoutInMinutes: 90
+  pool:
+    name: On-Prem Unity
+    demands:
+    - Unity2018.4.6f1
+    - COG-UnityCache-WUS2-01
+    - SDK_18362 -equals TRUE
+  steps:
+  - template: templates/common.yml
+    parameters:
+      # Only Build Standalone for Leap Motion as that is the only platform supported
+      buildUWPX86: false
+      buildUWPArm: false
+      buildUWPDotNet: false
+      # Check the style of a file 
+      scopedValidation: true
+      # Do not enable packaging 
+      packagingEnabled: false
+      UnityVersion: $(Unity2018Version)
+
+  - template: templates/leap-tests.yml
+      UnityVersion: $(Unity2018Version)
+
+  - template: templates/end.yml

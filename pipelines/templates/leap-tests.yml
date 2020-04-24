@@ -1,0 +1,14 @@
+# [Template] Leap Motion Build Steps
+parameters:
+  UnityVersion: ""
+
+
+# Modify the CSC file to filter out warnings produced from leap 
+
+# Get the leap core assets
+
+# Import the leap core assets
+
+# Make sure there are no errors
+
+# Create a standalone build 
