@@ -16,5 +16,7 @@ jobs:
   - template: templates/leap-tests.yml
     parameters:
       UnityVersion: $(Unity2018Version)
+      Arch: 'x86'  # x86|arm
+      Platform: 'Standalone' 
 
   - template: templates/end.yml
