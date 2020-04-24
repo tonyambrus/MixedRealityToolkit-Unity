@@ -1,11 +1,20 @@
 # [Template] Leap Motion Build Steps
 parameters:
-  Arch: ''  # x86|arm
-  Platform: '' 
-  UnityArgs: 'none' # [optional] additional args passed to Unity
-  ScriptingBackend: 'default'  # [optional] default|.NET
-  UnityVersion: ""
-
+- name: Arch
+  type: string
+  default: 'x86'
+- name: Platform
+  type: string
+  default: "Standalone"
+- name: UnityArgs
+  type: string
+  default: 'none'
+- name: ScriptingBackend
+  type: string
+  default: 'default'
+- name: UnityVersion
+  type: string
+  default: ""
 
 # Modify the CSC file to filter out warnings produced from leap 
 
