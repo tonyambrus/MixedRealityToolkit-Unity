@@ -58,7 +58,7 @@ steps:
 
     # Start Unity and call the UpdateCSC method
 
-   $proc = Start-Process -FilePath "$editor" -ArgumentList "-projectPath $(Get-Location) -executeMethod Microsoft.MixedReality.Toolkit.LeapMotion.UpdateCSC -sceneList $sceneList -logFile $($logFile.FullName) -batchMode -${{ parameters.Arch }} -buildOutput $outDir $extraArgs -CacheServerIPAddress $(Unity.CacheServer.Address) -logDirectory $logDirectory" -PassThru
+   $proc = Start-Process -FilePath "$editor" -ArgumentList "-projectPath $(Get-Location) -executeMethod Microsoft.MixedReality.Toolkit.LeapMotion.LeapMotionConfigurationChecker.UpdateCSC -sceneList $sceneList -logFile $($logFile.FullName) -batchMode -${{ parameters.Arch }} -buildOutput $outDir $extraArgs -CacheServerIPAddress $(Unity.CacheServer.Address) -logDirectory $logDirectory" -PassThru
 
 
    $ljob = Start-Job -ScriptBlock { param($log) Get-Content "$log" -Wait } -ArgumentList $logFile.FullName
