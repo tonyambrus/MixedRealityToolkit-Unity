@@ -16,7 +16,7 @@ parameters:
 # Make sure there are no errors
 
 # Create a standalone build 
-
+steps:
 - powershell: |
    $UnityPath = ${Env:${{ parameters.UnityVersion }}}
    # Find unity.exe as Start-UnityEditor currently doesn't support arbitrary parameters
