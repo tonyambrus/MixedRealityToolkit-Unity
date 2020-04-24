@@ -13,18 +13,6 @@ jobs:
     - COG-UnityCache-WUS2-01
     - SDK_18362 -equals TRUE
   steps:
-  - template: templates/common.yml
-    parameters:
-      # Only Build Standalone for Leap Motion as that is the only platform supported
-      buildUWPX86: false
-      buildUWPArm: false
-      buildUWPDotNet: false
-      # Check the style of a file 
-      scopedValidation: true
-      # Do not enable packaging 
-      packagingEnabled: false
-      UnityVersion: $(Unity2018Version)
-
   - template: templates/leap-tests.yml
       UnityVersion: $(Unity2018Version)
 
