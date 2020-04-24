@@ -1,7 +1,7 @@
 # [Template] Leap Motion Build Steps
 parameters:
-  Arch: 'x86'  # x86|arm
-  Platform: 'Standalone' 
+  Arch: ''  # x86|arm
+  Platform: '' 
   UnityArgs: 'none' # [optional] additional args passed to Unity
   ScriptingBackend: 'default'  # [optional] default|.NET
   UnityVersion: ""
