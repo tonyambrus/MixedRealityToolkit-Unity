@@ -92,7 +92,7 @@ steps:
    {
        exit $proc.ExitCode
    }
-displayName: "Build LeapExampleScene ${{ parameters.Platform }} ${{ parameters.Arch }} ${{ parameters.ScriptingBackend }}"
+  displayName: "Build LeapExampleScene ${{ parameters.Platform }} ${{ parameters.Arch }} ${{ parameters.ScriptingBackend }}"
 
 - task: PowerShell@2
   displayName: 'Validate build logs'
