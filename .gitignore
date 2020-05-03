@@ -101,3 +101,7 @@ MSBuildForUnity.Common.props
 *.msb4u.sln.meta
 Dependencies*
 Nuget.config*
+
+Assets/MRTK/MixedRealityToolkit.Providers/WindowsMixedReality/Shared/DotNetAdapter/.obj/
+Assets/MRTK/MixedRealityToolkit.Providers/WindowsMixedReality/Shared/DotNetAdapter/.bin/net46/
+Assets/MRTK/MixedRealityToolkit.Providers/WindowsMixedReality/Shared/DotNetAdapter/.bin/net46

@@ -3,7 +3,7 @@
   <metadata>
     <version>1.0.0</version>
     <authors>Tony Ambrus</authors>
-    <id>Microsoft.MR.MRTKCompiled</id>
+    <id>Microsoft.MR.MRTKCompiled.VSlice</id>
     <title />
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Precompiled version of MRTK, see https://github.com/microsoft/MixedRealityToolkit-Unity</description>
